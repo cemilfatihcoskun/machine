@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "machine"
+version = "0.1.0"
+description = "The machine clone from the movie Person of Interest."
+readme = "README.md"
+requires-python = "==3.12.*"
+authors = [
+    { name = "Cemil Fatih Coşkun" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+]
+dependencies = [
+    "opencv-python>=4.8.0",
+    "numpy>=1.22.0",
+    "onnxruntime>=1.15.0"
+]
+
+[project.scripts]
+the-machine = "src.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
